@@ -1,0 +1,388 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <link rel="stylesheet" href="styles/reset.css" />
+        <link rel="stylesheet" href="styles/style.css" />
+        <link rel="preload" href="fonts/bahnschrift.woff" as="font" />
+        <link rel="preload" href="fonts/bahnschrift.woff2" as="font" />
+        <title>PMC</title>
+    </head>
+    <body>
+        <header class="header">
+            <div class="header__content container">
+                <div class="header__wrapper">
+                    <div class="logo">
+                        <img src="img/logo-white.png" alt="Лого PMC" class="logo__img" width="90px" height="auto" />
+                    </div>
+                    <nav class="nav">
+                        <ul class="nav__list">
+                            <li class="nav__item">
+                                <a href="#about" class="nav__link">О нас</a>
+                            </li>
+                            <li class="nav__item">
+                                <a href="#services" class="nav__link">Услуги</a>
+                            </li>
+                            <li class="nav__item">
+                                <a href="#projects" class="nav__link">Проекты</a>
+                            </li>
+                            <li class="nav__item">
+                                <a href="#contacts" class="nav__link">Контакты</a>
+                            </li>
+                        </ul>
+                    </nav>
+                    <div class="feedback">
+                        <button class="feedback__button button">Написать нам</button>
+                    </div>
+                </div>
+
+                <div class="header__info">
+                    <p class="header__title">
+                        <span class="header__title_colored">Ускоряем ваши</span>
+                        бизнес процессы
+                    </p>
+                    <div class="header__description-wrap">
+                        <p class="header__description">
+                            Автоматизация бизнес-процессов на базе Google-таблиц, интеграции с Google-сервисами и внешними ресурсами, создание Telegram-ботов и
+                            кастомных скриптов.
+                        </p>
+                    </div>
+                </div>
+            </div>
+
+            <canvas id="neuro"></canvas>
+        </header>
+
+        <main class="main">
+            <!-- Автоматизация -->
+            <section class="automation container">
+                <div class="automation__top-block">
+                    <p class="automation__title">
+                        Мы освобождаем ваш бизнес от рутинных процессов <span class="automation__title_colored"> и человеческого фактора,</span> превращая в
+                        эффективную систему.
+                    </p>
+                    <div class="automation__texts">
+                        <p class="automation__text">
+                            С нашей помощью вы можете настроить сквозную аналитику по всем бизнес-метрикам, оценить прибыльность, маржинальность, и даже выявить
+                            узкие места в процессах.
+                        </p>
+                        <p class="automation__text">
+                            Готовы автоматизировать учёт производства, финансов или товаров, а также предоставить инструменты для прогнозирования доходности.
+                        </p>
+                    </div>
+                </div>
+                <div class="automation__bottom-block">
+                    <div class="automation__automation">
+                        <h2 class="automation__title-bottom title">Ценность автоматизации</h2>
+                    </div>
+                    <div class="automation__percent">
+                        <p class="automation__percent-text">
+                            до <span class="automation__percent-text_size">60</span>%<br />
+                            рутинных повторяющихся процессов могут быть успешно автоматизированы с помощью решений на основе Google-сервисов
+                        </p>
+                    </div>
+                </div>
+            </section>
+
+            <!-- О нас -->
+
+            <section class="about container" id="about">
+                <div class="about__wrap">
+                    <h2 class="about__title title">О нас</h2>
+                    <p class="about__slogan"><span class="about__slogan_text">PMC</span> &mdash; компания, которой доверяют.</p>
+                    <div class="about__content-wrap">
+                        <div class="about__content">
+                            <p class="about__description">Мы &mdash; компания полного цикла</p>
+                            <p class="about__text">
+                                <span class="about__text_colored">PMC</span> &mdash; компания по управлению проектами. Мы объединяем передовые методы реализации
+                                проектов, предлагаем решения на основе уникальных технологий
+                            </p>
+                        </div>
+                        <div class="about__statistics">
+                            <div class="about__item">
+                                <span class="about__number">300</span>
+                                <span class="about__text-statistic">сотрудников</span>
+                            </div>
+                            <div class="about__item">
+                                <span class="about__number">> 50</span>
+                                <span class="about__text-statistic">подрядчиков</span>
+                            </div>
+                            <div class="about__item">
+                                <span class="about__number">3</span>
+                                <span class="about__text-statistic">офиса</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Наши ценности -->
+
+            <section class="values container">
+                <div class="values__wrap">
+                    <h2 class="values__title title">Наши ценности</h2>
+                    <div class="values__list">
+                        <div class="values__item">
+                            <span class="values__text">Умение вести за собой</span>
+                            <span class="values__description">
+                                Благодаря нашим лидерам, обладающим сильными навыками ведения бизнеса, управления организацией, руководства проектами, мы входим
+                                в число мировых лидеров в своей сфере.
+                            </span>
+                        </div>
+                        <div class="values__item">
+                            <span class="values__text"> Инновационность, креативность и открытость к изменениям </span>
+                            <span class="values__description">
+                                Всегда отслеживая развитие рынка, прогнозируя всевозможные изменения и учитывая стремление компании к росту мы постоянно
+                                обучаемся, развиваемся и стараемся находить современные подходы для прогресса.
+                            </span>
+                        </div>
+                        <div class="values__item">
+                            <span class="values__text"> Честность, Надежность, Ответственность </span>
+                            <span class="values__description">
+                                В процессе деятельности мы руководствуемся действующим законодательством, этическими нормами и корпоративными правилами.
+                                Поступая честно, исполняя свои обещания, и действуя последовательно, мы подаем пример другим сотрудникам.
+                            </span>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Услуги -->
+
+            <section class="services container" id="services">
+                <div class="services__wrap">
+                    <h2 class="services__title title">Наши услуги</h2>
+                    <div class="services__list">
+                        <div class="services__item">
+                            <span class="services__count">/0.01</span>
+                            <span class="services__text">Парсинг данных</span>
+                            <span class="services__description">из почты / файлов .xlsx, .txt, .csv с сохранением в Google-таблицы или на диск</span>
+                        </div>
+                        <div class="services__item">
+                            <span class="services__count">/0.02</span>
+                            <span class="services__text">Генерация документов</span>
+                            <span class="services__description">из данных Google-таблиц, а также сохранение на диск, отправка по почте или в телеграм</span>
+                        </div>
+                        <div class="services__item">
+                            <span class="services__count">/0.03</span>
+                            <span class="services__text">Генерация презентаций</span>
+                            <span class="services__description">в Google Slides на основе шаблонов из Google-таблиц</span>
+                        </div>
+                        <div class="services__item">
+                            <span class="services__count">/0.04</span>
+                            <span class="services__text">Разработка Telegram-ботов</span>
+                            <span class="services__description"
+                                >отправка отчётов, уведомлений, файлов с диска / обратная интеграция: сохранение из Telegram на Google-диск</span
+                            >
+                        </div>
+                        <div class="services__item">
+                            <span class="services__count">/0.05</span>
+                            <span class="services__text">Разработка учётных систем</span>
+                            <span class="services__description"
+                                >финансовый / складской учёт, разработка финансовых моделей, дашбордов, графиков и форм ввода данных</span
+                            >
+                        </div>
+                        <div class="services__item">
+                            <span class="services__count">/0.06</span>
+                            <span class="services__text">Настройка интеграций</span>
+                            <span class="services__description">между Google-таблицами и Google-календрарём, Google-формами, WhatsApp и др.</span>
+                        </div>
+                        <div class="services__item">
+                            <span class="services__count">/0.07</span>
+                            <span class="services__text">Экспорт таблиц</span>
+                            <span class="services__description">в форматах .pdf и .xlsx на почту или диск</span>
+                        </div>
+                        <div class="services__item">
+                            <span class="services__count">/0.08</span>
+                            <span class="services__text">Разработка скриптов</span>
+                            <span class="services__description">с подключением к сервисам по API</span>
+                        </div>
+                        <div class="services__item">
+                            <span class="services__count">/0.09</span>
+                            <span class="services__text">SMS-рассылки</span>
+                            <span class="services__description">из данных Google-таблиц</span>
+                        </div>
+                    </div>
+
+                    <div class="services__support-blocks">
+                        <div class="services__block">
+                            <h2 class="services__title title">Разработка</h2>
+                            <p class="services__specification">
+                                При необходимости, мы готовы разработать индивидуальное решение для вашего бизнеса —скрипты для Google-сервисов, формулы любой
+                                сложности для Google-таблиц, Telegram-боты.
+                            </p>
+                            <div class="feedback">
+                                <button class="feedback__button button">Написать нам</button>
+                            </div>
+                        </div>
+                        <div class="services__block">
+                            <h2 class="services__title title">Поддержка</h2>
+                            <p class="services__specification">
+                                Мы также готовы помочь в улучшении ваших действующих инструментов — доработка таблиц, консультации, оптимизация процессов,
+                                администрирование и техническая поддержка.
+                            </p>
+                            <div class="feedback">
+                                <button class="feedback__button button">Написать нам</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Проекты -->
+
+            <section class="projects container" id="projects">
+                <div class="projects__wrap">
+                    <h2 class="projects__title title">Наши проекты</h2>
+                    <div class="projects__blocks">
+                        <div class="projects__block projects__block_main">
+                            <div class="projects__img-wrap projects__img-wrap_main">
+                                <img src="img/ruppyr.jpg" alt="Фото АО ИОЭС АЭС Руппур" class="projects__img projects__img_main" />
+                            </div>
+                            <a href="" class="projects__button"
+                                >АО ИОЭС <br />
+                                АЭС Руппур</a
+                            >
+                        </div>
+                        <div class="projects__block">
+                            <div class="projects__img-wrap">
+                                <img src="img/beryozovskaya.jpg" alt="Фото ООО Энергоинновация Березовская ГРЭС" class="projects__img" />
+                            </div>
+                            <a href="" class="projects__button"
+                                >ООО Энергоинновация <br />
+                                Березовская ГРЭС</a
+                            >
+                        </div>
+                        <div class="projects__block">
+                            <div class="projects__img-wrap">
+                                <img src="img/semakovskoe.jpg" alt="Фото ООО СК Русвелдинг Семаковское месторождение" class="projects__img" />
+                            </div>
+                            <a href="" class="projects__button"
+                                >ООО СК Русвелдинг <br />
+                                Семаковское месторождение</a
+                            >
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </main>
+
+        <footer class="footer" id="contacts">
+            <div class="footer__wrap container">
+                <div class="contacts">
+                    <form class="contscts__form-wrap">
+                        <div class="contacts__form">
+                            <div class="contacts__info">
+                                <h2 class="contacts__title title">Готовы обсудить проект?</h2>
+                                <p class="contacts__text">Давайте свяжемся</p>
+                                <div class="contacts__communication">
+                                    <p class="contacts__email-wrap">
+                                        <a href="mailto:info@pmccon.ru" class="contacts__email">info@pmccon.ru</a>
+                                    </p>
+                                    <a href="tel:+74959999999" class="contacts__tel" onclick="showPhoneNumber()">+7495 999 9999</a>
+                                </div>
+                            </div>
+                            <div class="contacts__details">
+                                <input type="text" name="name" id="name" placeholder="Имя" required />
+                                <input type="email" name="email" id="email" placeholder="Email" required />
+                                <textarea name="message" id="message" cols="52" rows="7" placeholder="Сообщение..." required></textarea>
+                                <button class="contacts__button">Отправить сообщение</button>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+
+                <div class="content">
+                    <div class="logo">
+                        <img src="img/logo-white.png" alt="Лого PMC" class="logo__img" width="90px" height="auto" />
+                    </div>
+                    <div class="content__menu">
+                        <ul class="content__list">
+                            <li class="content__item">
+                                <a href="#about" class="content__link">О нас</a>
+                            </li>
+                            <li class="content__item">
+                                <a href="#services" class="content__link">Услуги</a>
+                            </li>
+                            <li class="content__item">
+                                <a href="#projects" class="content__link">Проекты</a>
+                            </li>
+                            <li class="content__item">
+                                <a href="#contacts" class="content__link">Контакты</a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </footer>
+        <script type="x-shader/x-fragment" id="vertShader">
+            precision mediump float;
+
+            varying vec2 vUv;
+            attribute vec2 a_position;
+
+            void main() {
+                vUv = .5 * (a_position + 1.);
+                gl_Position = vec4(a_position, 0.0, 1.0);
+            }
+        </script>
+
+        <script type="x-shader/x-fragment" id="fragShader">
+            precision mediump float;
+
+            varying vec2 vUv;
+            uniform float u_time;
+            uniform float u_ratio;
+            uniform vec2 u_pointer_position;
+            uniform float u_scroll_progress;
+
+            vec2 rotate(vec2 uv, float th) {
+                return mat2(cos(th), sin(th), -sin(th), cos(th)) * uv;
+            }
+
+            float neuro_shape(vec2 uv, float t, float p) {
+                vec2 sine_acc = vec2(0.);
+                vec2 res = vec2(0.);
+                float scale = 8.;
+
+                for (int j = 0; j < 15; j++) {
+                    uv = rotate(uv, 1.);
+                    sine_acc = rotate(sine_acc, 1.);
+                    vec2 layer = uv * scale + float(j) + sine_acc - t;
+                    sine_acc += sin(layer);
+                    res += (.5 + .5 * cos(layer)) / scale;
+                    scale *= (1.2 - .07 * p);
+                }
+                return res.x + res.y;
+            }
+
+            void main() {
+                vec2 uv = .5 * vUv;
+                uv.x *= u_ratio;
+
+                vec2 pointer = vUv - u_pointer_position;
+                pointer.x *= u_ratio;
+                float p = clamp(length(pointer), 0., 1.);
+                p = .5 * pow(1. - p, 2.);
+
+                float t = .001 * u_time;
+                vec3 color = vec3(0.);
+
+                float noise = neuro_shape(uv, t, p);
+
+                noise = 1.2 * pow(noise, 3.);
+                noise += pow(noise, 10.);
+                noise = max(.0, noise - .5);
+                noise *= (1. - length(vUv - .5));
+
+                color = vec3(0.027,0.,0.522);
+
+                color = color * noise;
+
+                gl_FragColor = vec4(color, noise);
+            }
+        </script>
+        <script src="script/scripts.js"></script>
+    </body>
+</html>
