@@ -7,6 +7,10 @@
     --light-grey: #acaeb3;
     --orange: #fc9430;
     --lightest-blue: #98acec;
+    --basic-lightest-grey: #f8f7f6;
+    --basic-meduim-meduim-grey: #ebebeb;
+    --basic-light-light-grey: #d7d7d7;
+    --hover-grey: #2d2d2d;
 }
 
 /* Global */
@@ -18,7 +22,7 @@ html {
 body {
     background-color: var(--black);
     font-size: 1rem;
-    font-family: 'Bahnschrift', 'Arial', sans-serif;
+    font-family: 'Bahnschrift SemiCondensed', 'Arial', sans-serif;
 }
 
 .container {
@@ -39,6 +43,7 @@ body {
     background-color: var(--white);
     color: var(--black);
     text-transform: uppercase;
+    letter-spacing: 2px;
     border: none;
     border-radius: 10px;
     outline: none;
@@ -57,12 +62,7 @@ body {
 
 /* Fonts */
 
-@font-face {
-    font-family: 'bahnschrift';
-    src: url('../fonts/bahnschrift.woff2') format('woff2'), url('../fonts/bahnschrift.woff') format('woff');
-    font-weight: normal;
-    font-style: normal;
-}
+// НАДО ВЫБРАТЬ ДРУГОЙ ШРИФТ!!!!!!!!!!!!!
 
 /* Canvas*/
 
@@ -125,6 +125,8 @@ canvas#neuro {
     &__description {
         font-size: 2.125rem;
         color: var(--white);
+        font-weight: 300;
+        line-height: 1.2;
     }
 }
 
@@ -140,7 +142,7 @@ canvas#neuro {
 
     &__link {
         display: inline-block;
-        font-size: 1.125rem;
+        font-size: 1.5rem;
         color: var(--white);
         text-transform: uppercase;
         padding: 20px;
@@ -184,8 +186,10 @@ canvas#neuro {
 
     &__text {
         max-width: 528px;
-        font-size: 24px;
         color: var(--white);
+        font-size: 1.625rem;
+        font-weight: 300;
+        line-height: 1.2;
     }
 
     &__bottom-block {
@@ -319,12 +323,16 @@ canvas#neuro {
 
     &__text {
         font-size: 2.125rem;
+        text-transform: uppercase;
         flex: 1;
     }
 
     &__description {
-        font-size: 1.5rem;
         flex: 1;
+        font-size: 1.625rem;
+        color: var(--white);
+        font-weight: 300;
+        line-height: 1.2;
     }
 }
 
@@ -335,9 +343,9 @@ canvas#neuro {
         border-top: 1px solid var(--white);
     }
 
-    &__list {
+    &__blocks {
         display: grid;
-        grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+        grid-template-columns: repeat(auto-fill, minmax(450px, 1fr));
         gap: 80px 155px;
         color: var(--white);
         padding: 0 100px;
@@ -347,47 +355,47 @@ canvas#neuro {
     &__item {
         display: flex;
         flex-direction: column;
-        text-align: center;
         gap: 20px;
     }
 
-    &__count {
-        font-size: 1.125rem;
+    &__item-title {
+        font-size: 3.25rem;
         color: var(--lightest-blue);
-    }
-
-    &__text {
-        font-size: 1.75rem;
+        font-weight: bold;
+        text-transform: uppercase;
+        padding-bottom: 15px;
+        letter-spacing: 10px;
     }
 
     &__description {
-        font-size: 1.125rem;
-        color: var(--light-grey);
-    }
-
-    &__support-blocks {
-        display: flex;
-        justify-content: space-between;
-        flex-wrap: wrap;
-        border-top: 1px solid var(--lightest-blue);
-        border-bottom: 1px solid var(--lightest-blue);
-        gap: 20px;
-    }
-
-    &__block {
-        width: 48%;
+        font-size: 1.625rem;
         color: var(--white);
-        border-right: 1px solid var(--lightest-blue);
-        padding-bottom: 50px;
-
-        &:last-child {
-            border-right: none;
-        }
+        font-weight: 300;
+        line-height: 1.2;
+        padding-bottom: 15px;
+        padding-left: 20px;
     }
 
-    &__specification {
-        font-size: 1.25rem;
-        margin-bottom: 30px;
+    &__item-description {
+        position: relative;
+        font-size: 1.125rem;
+        font-weight: bold;
+        line-height: 2.5;
+        text-transform: uppercase;
+        padding-left: 20px;
+    }
+
+    &__item-description::before {
+        content: '';
+        background-image: url('../img/icon-arrow.png');
+        background-size: cover;
+        background-position: center;
+        background-repeat: no-repeat;
+        position: absolute;
+        width: 15px;
+        height: 15px;
+        top: 13px;
+        left: -12px;
     }
 }
 
@@ -402,44 +410,103 @@ canvas#neuro {
 
     &__blocks {
         display: flex;
-        justify-content: space-between;
+        align-items: flex-start;
         flex-wrap: wrap;
-        gap: 10px;
-        color: var(--white);
+        gap: 50px 30px;
+        max-width: 1530px;
+        margin: 0 auto;
     }
 
     &__block {
-        max-width: 400px;
-
-        &_main {
-            min-width: 970px;
-        }
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        max-width: 750px;
     }
 
     &__img-wrap {
         width: 100%;
-        height: 700px;
+        height: auto;
         overflow: hidden;
         display: flex;
-        align-items: center;
         justify-content: center;
-        margin-bottom: 20px;
+        align-items: center;
     }
 
     &__img {
-        width: 100%;
-        height: 100%;
-        object-fit: cover;
+        max-width: 100%;
+        max-height: 100%;
+        object-fit: contain;
     }
 
     &__button {
         color: var(--white);
         font-size: 1.25rem;
         transition: all 0.3s ease;
+        text-align: center;
+        margin-top: 20px;
 
         &:hover {
             color: var(--orange);
         }
+    }
+}
+
+/* Questions */
+
+.questions {
+    padding-bottom: 70px;
+
+    &__list {
+        margin: 20px 0;
+        padding: 0;
+
+        &:last-child {
+            border-bottom: 1px solid var(--basic-meduim-meduim-grey);
+        }
+    }
+
+    &__item {
+        display: block;
+        list-style: none;
+        overflow: hidden;
+        border-top: 1px solid var(--basic-meduim-meduim-grey);
+
+        &:hover {
+            background: var(--hover-grey);
+        }
+    }
+
+    &__expand {
+        display: flex;
+        justify-content: space-between;
+        padding: 15px;
+        text-decoration: none;
+        color: var(--white);
+        cursor: pointer;
+    }
+
+    &__question {
+        margin: 0;
+        padding: 0;
+        font-weight: 700;
+        font-size: 1rem;
+    }
+
+    &__answer {
+        display: none;
+        padding: 0 25px 10px;
+        line-height: 22px;
+    }
+
+    &__text {
+        font-size: 0.875rem;
+        color: var(--white);
+    }
+
+    &__arrow {
+        font-weight: 700;
+        font-size: 1.25rem;
     }
 }
 
@@ -485,10 +552,16 @@ canvas#neuro {
     &__tel {
         font-size: 1.25rem;
         color: var(--white);
+        transition: all 0.3s ease;
+
+        &:hover {
+            color: var(--orange);
+        }
     }
 
     &__details {
         flex-basis: 40%;
+        max-width: 770px;
     }
 
     &__button {
