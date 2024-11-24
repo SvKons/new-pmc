@@ -36,6 +36,26 @@
                         <button class="feedback__button button">Написать нам</button>
                     </div>
                 </div>
+                <div class="popup" id="popup">
+                    <div class="popup__content">
+                        <h2 class="popup__title">Напишите нам</h2>
+                        <div class="popup__container">
+                            <form>
+                                <div class="popup__contacts-form">
+                                    <div class="popup__contacts-details">
+                                        <div class="popup__contacts-top">
+                                            <input type="text" name="name" id="name" placeholder="Имя" required />
+                                            <input type="email" name="email" id="email" placeholder="Email" required />
+                                        </div>
+                                        <textarea name="message" id="message" cols="52" rows="7" placeholder="Сообщение..." required></textarea>
+                                        <button class="popup__contacts-button">Отправить сообщение</button>
+                                    </div>
+                                </div>
+                            </form>
+                        </div>
+                        <button class="popup__close-button">X</button>
+                    </div>
+                </div>
 
                 <div class="header__info">
                     <p class="header__title">
@@ -215,35 +235,96 @@
 
             <section class="projects container" id="projects">
                 <div class="projects__wrap">
-                    <h2 class="projects__title title">Наши проекты</h2>
-                    <div class="projects__blocks">
-                        <div class="projects__block projects__block_main">
-                            <div class="projects__img-wrap projects__img-wrap_main">
-                                <img src="img/ruppyr.jpg" alt="Фото АО ИОЭС АЭС Руппур" class="projects__img projects__img_main" />
-                            </div>
-                            <a href="" class="projects__button"
-                                >АО ИОЭС <br />
-                                АЭС Руппур</a
-                            >
-                        </div>
-                        <div class="projects__block">
-                            <div class="projects__img-wrap">
-                                <img src="img/beryozovskaya.jpg" alt="Фото ООО Энергоинновация Березовская ГРЭС" class="projects__img" />
-                            </div>
-                            <a href="" class="projects__button"
-                                >ООО Энергоинновация <br />
-                                Березовская ГРЭС</a
-                            >
-                        </div>
-                        <div class="projects__block">
-                            <div class="projects__img-wrap">
-                                <img src="img/semakovskoe.jpg" alt="Фото ООО СК Русвелдинг Семаковское месторождение" class="projects__img" />
-                            </div>
-                            <a href="" class="projects__button"
-                                >ООО СК Русвелдинг <br />
-                                Семаковское месторождение</a
-                            >
-                        </div>
+                    <div class="projects__title-wrap">
+                        <h2 class="projects__title title">Наши проекты</h2>
+                    </div>
+                    <div class="projects__block">
+                        <ul class="projects__list">
+                            <li class="projects__item">
+                                <a href="/" class="projects__link">
+                                    <div class="projects__left-container">
+                                        <span class="projects__count">01</span>
+                                        <span class="projects__name-project"
+                                            >АО ИОЭС <br />
+                                            АЭС Руппур</span
+                                        >
+                                    </div>
+
+                                    <div class="projects__img-wrap">
+                                        <svg class="projects__img" xmlns="http://www.w3.org/2000/svg" width="27" height="27" fill="none">
+                                            <circle cx="13.5" cy="13.5" r="13.5" fill="#19213A" />
+                                            <circle cx="9.643" cy="17.357" r=".643" fill="#F6F8FF" />
+                                            <circle cx="11.571" cy="15.429" r=".643" fill="#F6F8FF" />
+                                            <circle cx="13.5" cy="13.5" r=".643" fill="#F6F8FF" />
+                                            <circle cx="15.428" cy="11.572" r=".643" fill="#F6F8FF" />
+                                            <circle cx="17.357" cy="9.643" r=".643" fill="#F6F8FF" />
+                                            <circle cx="14.786" cy="9.643" r=".643" fill="#F6F8FF" />
+                                            <circle cx="12.215" cy="9.643" r=".643" fill="#F6F8FF" />
+                                            <circle cx="9.643" cy="9.643" r=".643" fill="#F6F8FF" />
+                                            <circle cx="17.357" cy="12.215" r=".643" fill="#F6F8FF" />
+                                            <circle cx="17.357" cy="14.786" r=".643" fill="#F6F8FF" />
+                                            <circle cx="17.357" cy="17.357" r=".643" fill="#F6F8FF" />
+                                        </svg>
+                                    </div>
+                                </a>
+                            </li>
+                            <li class="projects__item">
+                                <a href="/" class="projects__link">
+                                    <div class="projects__left-container">
+                                        <span class="projects__count">02</span>
+                                        <span class="projects__name-project">
+                                            ООО Энергоинновация <br />
+                                            Березовская ГРЭС
+                                        </span>
+                                    </div>
+
+                                    <div class="projects__img-wrap">
+                                        <svg class="projects__img" xmlns="http://www.w3.org/2000/svg" width="27" height="27" fill="none">
+                                            <circle cx="13.5" cy="13.5" r="13.5" fill="#19213A" />
+                                            <circle cx="9.643" cy="17.357" r=".643" fill="#F6F8FF" />
+                                            <circle cx="11.571" cy="15.429" r=".643" fill="#F6F8FF" />
+                                            <circle cx="13.5" cy="13.5" r=".643" fill="#F6F8FF" />
+                                            <circle cx="15.428" cy="11.572" r=".643" fill="#F6F8FF" />
+                                            <circle cx="17.357" cy="9.643" r=".643" fill="#F6F8FF" />
+                                            <circle cx="14.786" cy="9.643" r=".643" fill="#F6F8FF" />
+                                            <circle cx="12.215" cy="9.643" r=".643" fill="#F6F8FF" />
+                                            <circle cx="9.643" cy="9.643" r=".643" fill="#F6F8FF" />
+                                            <circle cx="17.357" cy="12.215" r=".643" fill="#F6F8FF" />
+                                            <circle cx="17.357" cy="14.786" r=".643" fill="#F6F8FF" />
+                                            <circle cx="17.357" cy="17.357" r=".643" fill="#F6F8FF" />
+                                        </svg>
+                                    </div>
+                                </a>
+                            </li>
+                            <li class="projects__item">
+                                <a href="/" class="projects__link">
+                                    <div class="projects__left-container">
+                                        <span class="projects__count">03</span>
+                                        <span class="projects__name-project">
+                                            ООО СК Русвелдинг <br />
+                                            Семаковское месторождение
+                                        </span>
+                                    </div>
+
+                                    <div class="projects__img-wrap">
+                                        <svg class="projects__img" xmlns="http://www.w3.org/2000/svg" width="27" height="27" fill="none">
+                                            <circle cx="13.5" cy="13.5" r="13.5" fill="#19213A" />
+                                            <circle cx="9.643" cy="17.357" r=".643" fill="#F6F8FF" />
+                                            <circle cx="11.571" cy="15.429" r=".643" fill="#F6F8FF" />
+                                            <circle cx="13.5" cy="13.5" r=".643" fill="#F6F8FF" />
+                                            <circle cx="15.428" cy="11.572" r=".643" fill="#F6F8FF" />
+                                            <circle cx="17.357" cy="9.643" r=".643" fill="#F6F8FF" />
+                                            <circle cx="14.786" cy="9.643" r=".643" fill="#F6F8FF" />
+                                            <circle cx="12.215" cy="9.643" r=".643" fill="#F6F8FF" />
+                                            <circle cx="9.643" cy="9.643" r=".643" fill="#F6F8FF" />
+                                            <circle cx="17.357" cy="12.215" r=".643" fill="#F6F8FF" />
+                                            <circle cx="17.357" cy="14.786" r=".643" fill="#F6F8FF" />
+                                            <circle cx="17.357" cy="17.357" r=".643" fill="#F6F8FF" />
+                                        </svg>
+                                    </div>
+                                </a>
+                            </li>
+                        </ul>
                     </div>
                 </div>
             </section>
@@ -370,7 +451,7 @@
         <footer class="footer" id="contacts">
             <div class="footer__wrap container">
                 <div class="contacts">
-                    <form class="contscts__form-wrap">
+                    <div class="contscts__form-wrap">
                         <div class="contacts__form">
                             <div class="contacts__info">
                                 <h2 class="contacts__title title">Готовы обсудить проект?</h2>
@@ -382,14 +463,23 @@
                                     <a href="tel:+74959999999" class="contacts__tel" onclick="showPhoneNumber()">+7495 999 9999</a>
                                 </div>
                             </div>
-                            <div class="contacts__details">
-                                <input type="text" name="name" id="name" placeholder="Имя" required />
-                                <input type="email" name="email" id="email" placeholder="Email" required />
-                                <textarea name="message" id="message" cols="52" rows="7" placeholder="Сообщение..." required></textarea>
-                                <button class="contacts__button">Отправить сообщение</button>
+                            <div class="contacts__container">
+                                <form>
+                                    <div class="contacts__form-wrap">
+                                        <div class="contacts__details">
+                                            <div class="contacts__top-wrap">
+                                                <input type="text" name="name" id="name" placeholder="Имя" required />
+                                                <input type="email" name="email" id="email" placeholder="Email" required />
+                                            </div>
+
+                                            <textarea name="message" id="message" cols="52" rows="7" placeholder="Сообщение..." required></textarea>
+                                            <button class="contacts__button">Отправить сообщение</button>
+                                        </div>
+                                    </div>
+                                </form>
                             </div>
                         </div>
-                    </form>
+                    </div>
                 </div>
 
                 <div class="content">
@@ -485,5 +575,6 @@
         <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
         <script src="script/scripts.js"></script>
         <script src="script/accordion.js"></script>
+        <script src="script/popup.js"></script>
     </body>
 </html>

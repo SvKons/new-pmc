@@ -1,3 +1,4 @@
+@charset "UTF-8";
 :root {
   --white: #fff;
   --black: #000;
@@ -9,6 +10,7 @@
   --basic-meduim-meduim-grey: #ebebeb;
   --basic-light-light-grey: #d7d7d7;
   --hover-grey: #2d2d2d;
+  --hover-blue: #576bad;
 }
 
 /* Global */
@@ -72,6 +74,9 @@ canvas#neuro {
 /* Header */
 .header {
   height: 100vh;
+}
+.header_inner {
+  height: auto;
 }
 .header__content {
   display: flex;
@@ -335,49 +340,58 @@ canvas#neuro {
 }
 .projects__wrap {
   border-top: 1px solid var(--white);
-}
-.projects__blocks {
   display: flex;
-  align-items: flex-start;
-  flex-wrap: wrap;
-  gap: 50px 30px;
-  max-width: 1530px;
-  margin: 0 auto;
+  justify-content: space-between;
 }
 .projects__block {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  max-width: 750px;
+  width: 50%;
+  padding-top: 50px;
 }
-.projects__img-wrap {
-  width: 100%;
-  height: auto;
-  overflow: hidden;
+.projects__left-container {
   display: flex;
   justify-content: center;
   align-items: center;
+  gap: 30px;
 }
-.projects__img {
-  max-width: 100%;
-  max-height: 100%;
-  -o-object-fit: contain;
-     object-fit: contain;
+.projects__list {
+  height: 100%;
+  display: flex;
+  justify-content: space-between;
+  flex-direction: column;
+  font-size: 1.625rem;
+  font-weight: 300;
+  line-height: 1.2;
 }
-.projects__button {
+.projects__link {
+  display: flex;
+  justify-content: space-between;
   color: var(--white);
-  font-size: 1.25rem;
-  transition: all 0.3s ease;
-  text-align: center;
-  margin-top: 20px;
+  padding: 30px 30px 30px 10px;
 }
-.projects__button:hover {
-  color: var(--orange);
+.projects__item .projects__link {
+  transition: all 0.5s ease;
+}
+.projects__item:not(:last-child) .projects__link {
+  border-bottom: 1px solid var(--hover-blue);
+}
+.projects__item:hover .projects__link {
+  background-color: var(--hover-blue);
+  border-radius: 10px;
+  border: none;
+}
+.projects__count {
+  color: var(--lightest-blue);
+}
+.projects__img-wrap {
+  align-content: center;
 }
 
 /* Questions */
 .questions {
   padding-bottom: 70px;
+}
+.questions__wrap {
+  border-top: 1px solid var(--white);
 }
 .questions__list {
   margin: 20px 0;
@@ -434,7 +448,7 @@ canvas#neuro {
 .contacts {
   margin-bottom: 100px;
 }
-.contacts__form {
+.contacts__form, .contacts__form-wrap {
   display: flex;
   justify-content: space-between;
 }
@@ -463,40 +477,46 @@ canvas#neuro {
 .contacts__email:hover, .contacts__tel:hover {
   color: var(--orange);
 }
-.contacts__details {
-  flex-basis: 40%;
-  max-width: 770px;
+.contacts__container {
+  margin-top: 50px;
 }
-.contacts__button {
-  padding: 15px 25px;
-  color: var(--black);
-  background: var(--white);
-  outline: none;
-  border: none;
-  margin: 15px;
-  font-size: 0.875rem;
-  letter-spacing: 2px;
-  cursor: pointer;
+.contacts__top-wrap {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 20px;
+}
+.contacts__details {
+  flex-basis: 48%;
+  max-width: 508px;
 }
 .contacts__details input[type=text], .contacts__details input[type=email] {
-  padding: 15px 20px;
-  color: var(--white);
+  color: var(--basic-black);
   outline: none;
   border: 1px solid var(--grey);
-  margin: 35px 15px;
   font-size: 14px;
+  padding: 15px 20px;
 }
 .contacts__details textarea {
-  padding: 15px 20px;
-  margin: 0 15px;
-  color: var(--black);
+  color: var(--basic-black);
   outline: none;
   border: 1px solid var(--grey);
   font-size: 14px;
   resize: none;
+  padding: 15px 20px;
+  margin-bottom: 20px;
+}
+.contacts__button {
+  color: var(--basic-white);
+  font-weight: 500;
+  outline: none;
+  border: none;
+  font-size: 14px;
+  letter-spacing: 2px;
+  cursor: pointer;
+  padding: 15px 25px;
 }
 .contacts__details input[type=text]:focus, .contacts__details input[type=email]:focus, .contacts__details textarea:focus {
-  border-color: var(--white);
+  border-color: var(--black);
 }
 
 .content {
@@ -520,4 +540,104 @@ canvas#neuro {
   color: var(--white);
   text-transform: uppercase;
   padding: 20px;
+}
+
+/* Popep */
+.popup {
+  display: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.5);
+  justify-content: center;
+  align-items: center;
+}
+.popup__title {
+  font-size: 1.625rem;
+  color: var(--black);
+  font-weight: 300;
+  line-height: 1.2;
+  text-transform: uppercase;
+  padding-bottom: 15px;
+}
+.popup__content {
+  background: var(--white);
+  padding: 20px;
+  border-radius: 5px;
+  position: relative;
+}
+.popup__contacts-details {
+  display: flex;
+  flex-direction: column;
+}
+.popup__contacts-top {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 20px;
+}
+.popup__contacts-details input[type=text], .popup__contacts-details input[type=email] {
+  color: var(--basic-black);
+  outline: none;
+  border: 1px solid var(-grey);
+  font-size: 14px;
+  padding: 15px 20px;
+}
+.popup__contacts-details textarea {
+  color: var(--basic-black);
+  outline: none;
+  border: 1px solid var(--grey);
+  font-size: 14px;
+  resize: none;
+  padding: 15px 20px;
+  margin-bottom: 20px;
+}
+.popup__contacts-button {
+  color: var(--white);
+  background-color: var(--black);
+  font-weight: 500;
+  outline: none;
+  border: none;
+  font-size: 14px;
+  letter-spacing: 2px;
+  cursor: pointer;
+  padding: 15px 25px;
+}
+.popup__contacts-details input[type=text]:focus, .popup__contacts-details input[type=email]:focus, .popup__contacts-details textarea:focus {
+  border-color: var(--black);
+}
+.popup__close-button {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  background: none;
+  border: none;
+  font-size: 1.2rem;
+  cursor: pointer;
+}
+
+/* Berezovskaya*/
+.main-inner {
+  position: relative;
+}
+
+.top-content {
+  background-image: url(../img/beryozovskaya-2.jpg);
+  background-position: top center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  width: 100%;
+  height: 100vh;
+  position: absolute;
+  top: -550px;
+}
+.top-content__title {
+  font-size: 4.5rem;
+  text-align: center;
+  position: relative;
+  color: var(--white);
+  top: 50%; /* Центрирует текст по вертикали */
+  padding-top: 200px;
+  z-index: 10000;
 }/*# sourceMappingURL=style.css.map */
