@@ -51,6 +51,12 @@ body {
     outline: none;
     padding: 20px;
     cursor: pointer;
+    transition: all 0.3s ease;
+
+    &:hover {
+        color: var(--white);
+        background-color: var(--orange);
+    }
 }
 
 .logo {
@@ -152,6 +158,11 @@ canvas#neuro {
         color: var(--white);
         text-transform: uppercase;
         padding: 20px;
+        transition: all 0.3s ease;
+
+        &:hover {
+            color: var(--orange);
+        }
     }
 }
 
@@ -534,14 +545,11 @@ canvas#neuro {
 
 .footer {
     padding-bottom: 30px;
-
-    &__wrap {
-        border-top: 1px solid var(--white);
-    }
 }
 
 .contacts {
     margin-bottom: 100px;
+    border-top: 1px solid var(--white);
 
     &__form,
     &__form-wrap {
@@ -624,6 +632,12 @@ canvas#neuro {
         letter-spacing: 2px;
         cursor: pointer;
         padding: 15px 25px;
+        transition: all 0.3s ease;
+
+        &:hover {
+            color: var(--white);
+            background-color: var(--orange);
+        }
     }
 
     &__details input[type='text']:focus,
@@ -654,6 +668,11 @@ canvas#neuro {
         color: var(--white);
         text-transform: uppercase;
         padding: 20px;
+        transition: all 0.3s ease;
+
+        &:hover {
+            color: var(--orange);
+        }
     }
 }
 
@@ -680,10 +699,12 @@ canvas#neuro {
     }
 
     &__content {
-        background: var(--white);
-        padding: 20px;
-        border-radius: 5px;
         position: relative;
+        box-shadow: 0 0 15px rgba(255, 255, 255, 1);
+        background: var(--white);
+        border-radius: 5px;
+        padding: 20px;
+        z-index: 10001;
     }
 
     &__contacts-details {
@@ -726,6 +747,12 @@ canvas#neuro {
         letter-spacing: 2px;
         cursor: pointer;
         padding: 15px 25px;
+        transition: all 0.3s ease;
+
+        &:hover {
+            color: var(--white);
+            background-color: var(--orange);
+        }
     }
 
     &__contacts-details input[type='text']:focus,
@@ -745,10 +772,11 @@ canvas#neuro {
     }
 }
 
-/* Berezovskaya*/
+/* Бкпкзовская */
 
 .main-inner {
     position: relative;
+    background-color: var(--black);
 }
 
 .top-content {
@@ -757,17 +785,153 @@ canvas#neuro {
     background-size: cover;
     background-repeat: no-repeat;
     width: 100%;
-    height: 100vh;
-    position: absolute;
-    top: -550px;
+    height: 800px;
+    position: relative;
+    top: -125px;
+    margin-top: 0;
 
     &__title {
         font-size: 4.5rem;
         text-align: center;
         position: relative;
         color: var(--white);
-        top: 50%; /* Центрирует текст по вертикали */
-        padding-top: 200px;
-        z-index: 10000;
+        top: 50%;
+        transform: translateY(-50%);
+        z-index: 100;
+    }
+}
+
+/* Характеристики */
+
+.characteristics {
+    position: relative;
+    margin-top: -150px;
+
+    &__wrap {
+        position: relative;
+        top: -130px;
+        width: 100%;
+    }
+
+    &__map-wrap {
+        position: relative;
+        margin-bottom: 30px;
+    }
+
+    &__map {
+        position: relative;
+
+        width: 616px;
+        overflow: hidden;
+        margin: 0 auto;
+    }
+
+    &__block {
+        border-top: 1px solid var(--white);
+    }
+
+    &__title {
+        color: var(--white);
+    }
+
+    &__container {
+        display: flex;
+        justify-content: space-between;
+        flex-wrap: wrap;
+    }
+
+    &__item {
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
+        color: var(--white);
+
+        font-weight: 300;
+        line-height: 1.2;
+    }
+
+    &__count {
+        position: relative;
+        font-size: 2.5rem;
+    }
+
+    &__text {
+        font-size: 1.375rem;
+    }
+
+    &__sup {
+        position: absolute;
+        top: -12px;
+        margin-left: 6px;
+    }
+}
+
+/* О проекте*/
+
+.about-project {
+    margin-bottom: 100px;
+    &__wrap {
+        border-top: 1px solid var(--white);
+    }
+
+    &__block {
+        color: var(--white);
+        display: flex;
+        justify-content: space-between;
+        padding: 0 100px;
+    }
+
+    &__about-text {
+        max-width: 800px;
+    }
+
+    &__about-text {
+        color: var(--white);
+        font-size: 1.625rem;
+        font-weight: 300;
+        line-height: 1.2;
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    &__characteristics {
+        max-width: 600px;
+        width: 100%;
+        height: auto;
+    }
+
+    &__container {
+        padding: 30px;
+        display: flex;
+        flex-direction: column;
+        gap: 15px;
+        border-radius: 20px;
+        box-shadow: 0 0 15px rgba(255, 255, 255, 1);
+    }
+
+    &__info {
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    &__info {
+        font-size: 1.5rem;
+    }
+
+    &__text {
+        &_colored {
+            color: var(--lightest-blue);
+            opacity: 0.8;
+        }
+    }
+}
+
+/* Галерия проекта*/
+
+.project-gallery {
+    &__wrap {
+        border-top: 1px solid var(--white);
     }
 }
