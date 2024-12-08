@@ -60,7 +60,7 @@
                 <div class="header__info">
                     <p class="header__title">
                         <span class="header__title_colored">Ускоряем ваши</span>
-                        бизнес процессы
+                        бизнес-процессы
                     </p>
                     <div class="header__description-wrap">
                         <p class="header__description">
@@ -75,7 +75,7 @@
         </header>
 
         <main class="main">
-            <!-- Автоматизация -->
+            <!-- Планирование -->
             <section class="automation container">
                 <div class="automation__top-block">
                     <p class="automation__title">
@@ -94,7 +94,7 @@
                 </div>
                 <div class="automation__bottom-block">
                     <div class="automation__automation">
-                        <h2 class="automation__title-bottom title">Ценность автоматизации</h2>
+                        <h2 class="automation__title-bottom title">Ценность планирования</h2>
                     </div>
                     <div class="automation__percent">
                         <p class="automation__percent-text">
@@ -110,18 +110,18 @@
             <section class="about container" id="about">
                 <div class="about__wrap">
                     <h2 class="about__title title">О нас</h2>
-                    <p class="about__slogan"><span class="about__slogan_text">PMC</span> &mdash; компания, которой доверяют.</p>
+                    <p class="about__slogan"><span class="about__slogan_text">PMCCON</span> &mdash; компания, которой доверяют.</p>
                     <div class="about__content-wrap">
                         <div class="about__content">
                             <p class="about__description">Мы &mdash; компания полного цикла</p>
                             <p class="about__text">
-                                <span class="about__text_colored">PMC</span> &mdash; компания по управлению проектами. Мы объединяем передовые методы реализации
-                                проектов, предлагаем решения на основе уникальных технологий
+                                <span class="about__text_colored">PMCCON</span> &mdash; компания по управлению проектами. Мы объединяем передовые методы
+                                реализации проектов, предлагаем решения на основе уникальных технологий
                             </p>
                         </div>
                         <div class="about__statistics">
                             <div class="about__item">
-                                <span class="about__number">300</span>
+                                <span class="about__number">20</span>
                                 <span class="about__text-statistic">сотрудников</span>
                             </div>
                             <div class="about__item">
@@ -144,25 +144,26 @@
                     <h2 class="values__title title">Наши ценности</h2>
                     <div class="values__list">
                         <div class="values__item">
-                            <span class="values__text">Умение вести за собой</span>
-                            <span class="values__description">
+                            <h3 class="values__text">Умение вести за собой</h3>
+                            <p class="values__description">
                                 Благодаря нашим лидерам, обладающим сильными навыками ведения бизнеса, управления организацией, руководства проектами, мы входим
                                 в число мировых лидеров в своей сфере.
-                            </span>
+                            </p>
                         </div>
                         <div class="values__item">
-                            <span class="values__text"> Инновационность, креативность и открытость к изменениям </span>
-                            <span class="values__description">
+                            <h3 class="values__text">Инновационность, креативность и открытость к изменениям</h3>
+                            <p class="values__description">
                                 Всегда отслеживая развитие рынка, прогнозируя всевозможные изменения и учитывая стремление компании к росту мы постоянно
                                 обучаемся, развиваемся и стараемся находить современные подходы для прогресса.
-                            </span>
+                            </p>
                         </div>
+
                         <div class="values__item">
-                            <span class="values__text"> Честность, Надежность, Ответственность </span>
-                            <span class="values__description">
+                            <h3 class="values__text">Честность, Надежность, Ответственность</h3>
+                            <p class="values__description">
                                 В процессе деятельности мы руководствуемся действующим законодательством, этическими нормами и корпоративными правилами.
                                 Поступая честно, исполняя свои обещания, и действуя последовательно, мы подаем пример другим сотрудникам.
-                            </span>
+                            </p>
                         </div>
                     </div>
                 </div>
@@ -468,11 +469,22 @@
                                     <div class="contacts__form-wrap">
                                         <div class="contacts__details">
                                             <div class="contacts__top-wrap">
-                                                <input type="text" name="name" id="name" placeholder="Имя" required />
+                                                <input type="text" name="name" id="name" placeholder="Ваше имя" required />
+                                                <input type="tel" name="tel" id="tel" placeholder="Телефон" required />
                                                 <input type="email" name="email" id="email" placeholder="Email" required />
                                             </div>
-
-                                            <textarea name="message" id="message" cols="52" rows="7" placeholder="Сообщение..." required></textarea>
+                                            <p class="contacts__politics">
+                                                Нажимая на кнопку "Отправить" вы соглашаетесь с нашей
+                                                <a href="#" class="contacts__politics-link">Политикой конфиденциальности</a>
+                                            </p>
+                                            <textarea
+                                                name="message"
+                                                id="message"
+                                                cols="52"
+                                                rows="7"
+                                                placeholder="Ваш вопрос (необязательно)"
+                                                required
+                                            ></textarea>
                                             <button class="contacts__button">Отправить сообщение</button>
                                         </div>
                                     </div>

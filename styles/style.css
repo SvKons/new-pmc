@@ -2,6 +2,7 @@
 :root {
   --white: #fff;
   --black: #000;
+  --dark-black: #121212;
   --grey: rgb(112, 119, 145);
   --light-grey: #acaeb3;
   --orange: #fc9430;
@@ -119,7 +120,7 @@ canvas#neuro {
   max-width: 570px;
 }
 .header__description {
-  font-size: 2.125rem;
+  font-size: 1.625rem;
   color: var(--white);
   font-weight: 300;
   line-height: 1.2;
@@ -146,7 +147,7 @@ canvas#neuro {
 
 /* Main */
 .main {
-  background-color: var(--black);
+  background-color: var(--dark-black);
   padding-top: 150px;
 }
 
@@ -263,30 +264,36 @@ canvas#neuro {
   border-top: 1px solid var(--white);
 }
 .values__list {
-  display: flex;
-  justify-content: space-between;
-  flex-wrap: wrap;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: 140px repeat(4, auto);
+  gap: 50px;
   color: var(--white);
-  padding: 0 100px;
+  padding: 30px 200px;
 }
 .values__item {
-  max-width: 450px;
-  min-height: 150px;
-  display: flex;
-  flex-direction: column;
-  gap: 20px;
+  display: grid;
+  grid-template-columns: 1fr auto auto;
+  grid-template-rows: subgrid;
+  grid-row: span 2;
+  grid-template-areas: "title title title" "description description description";
+  gap: 10px;
+  padding-bottom: 15px;
 }
 .values__text {
+  grid-area: title;
   font-size: 2.125rem;
   text-transform: uppercase;
-  flex: 1;
+  padding: 0 15px;
+  margin: 0;
 }
 .values__description {
-  flex: 1;
+  grid-area: description;
   font-size: 1.625rem;
-  color: var(--white);
   font-weight: 300;
   line-height: 1.2;
+  margin: 0;
+  padding: 0 15px;
 }
 
 /* Services */
@@ -397,7 +404,7 @@ canvas#neuro {
 
 /* Questions */
 .questions {
-  padding-bottom: 70px;
+  margin-bottom: 70px;
 }
 .questions__wrap {
   border-top: 1px solid var(--white);
@@ -455,10 +462,6 @@ canvas#neuro {
   margin-bottom: 100px;
   border-top: 1px solid var(--white);
 }
-.contacts__form, .contacts__form-wrap {
-  display: flex;
-  justify-content: space-between;
-}
 .contacts__info {
   color: var(--white);
 }
@@ -489,34 +492,43 @@ canvas#neuro {
 }
 .contacts__top-wrap {
   display: flex;
+  flex-direction: column;
   justify-content: space-between;
+  gap: 20px;
   margin-bottom: 20px;
 }
 .contacts__details {
-  flex-basis: 48%;
-  max-width: 508px;
+  display: flex;
+  flex-direction: column;
+  max-width: 950px;
 }
-.contacts__details input[type=text], .contacts__details input[type=email] {
-  color: var(--basic-black);
+.contacts__details input[type=text], .contacts__details input[type=tel], .contacts__details input[type=email] {
+  font-size: 14px;
+  color: var(--black);
+  background-color: var(--black);
   outline: none;
   border: 1px solid var(--grey);
-  font-size: 14px;
+  outline: none;
   padding: 15px 20px;
 }
 .contacts__details textarea {
-  color: var(--basic-black);
+  font-size: 14px;
+  color: var(--black);
   outline: none;
   border: 1px solid var(--grey);
-  font-size: 14px;
+  background-color: var(--black);
+  outline: none;
   resize: none;
   padding: 15px 20px;
   margin-bottom: 20px;
 }
 .contacts__button {
-  color: var(--basic-white);
+  color: var(--white);
+  background-color: var(--black);
   font-weight: 500;
   outline: none;
-  border: none;
+  border: 1px solid var(--grey);
+  border-radius: 10px;
   font-size: 14px;
   letter-spacing: 2px;
   cursor: pointer;
@@ -524,11 +536,22 @@ canvas#neuro {
   transition: all 0.3s ease;
 }
 .contacts__button:hover {
-  color: var(--white);
   background-color: var(--orange);
 }
 .contacts__details input[type=text]:focus, .contacts__details input[type=email]:focus, .contacts__details textarea:focus {
   border-color: var(--black);
+}
+.contacts__politics, .contacts__politics-link {
+  color: var(--white);
+  font-size: 0.875rem;
+}
+.contacts__politics {
+  max-width: 280px;
+  line-height: 1.2;
+  margin-bottom: 20px;
+}
+.contacts__politics-link {
+  text-decoration: underline;
 }
 
 .content {
@@ -558,7 +581,7 @@ canvas#neuro {
   color: var(--orange);
 }
 
-/* Popep */
+/* Popup */
 .popup {
   display: none;
   position: fixed;
@@ -640,7 +663,7 @@ canvas#neuro {
   cursor: pointer;
 }
 
-/* Бкпкзовская */
+/* Березовская */
 .main-inner {
   position: relative;
   background-color: var(--black);
