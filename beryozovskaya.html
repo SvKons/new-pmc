@@ -10,55 +10,31 @@
         <title>Березовская ГРЭС</title>
     </head>
     <body>
-        <header class="header header_inner">
-            <div class="header__content container">
-                <div class="header__wrapper">
-                    <div class="logo">
-                        <a href="index.html"><img src="img/logo-white.png" alt="Лого PMC" class="logo__img" width="90px" height="auto" /></a>
-                    </div>
-                    <nav class="nav">
-                        <ul class="nav__list">
-                            <li class="nav__item">
-                                <a href="/index.html#about" class="nav__link">О нас</a>
-                            </li>
-                            <li class="nav__item">
-                                <a href="/index.html#services" class="nav__link">Услуги</a>
-                            </li>
-                            <li class="nav__item">
-                                <a href="/index.html#projects" class="nav__link">Проекты</a>
-                            </li>
-                            <li class="nav__item">
-                                <a href="/index.html#contacts" class="nav__link">Контакты</a>
-                            </li>
-                        </ul>
-                    </nav>
-                    <div class="feedback">
-                        <button class="feedback__button button">Написать нам</button>
-                    </div>
+        <header class="header">
+            <div class="nav__wrapper">
+                <div class="logo">
+                    <a href="index.html"><img src="img/logo-white.png" alt="Лого PMC" class="logo__img" width="90px" height="auto" /></a>
                 </div>
-                <div class="popup" id="popup">
-                    <div class="popup__content">
-                        <h2 class="popup__title">Напишите нам</h2>
-                        <div class="popup__container">
-                            <form>
-                                <div class="popup__contacts-form">
-                                    <div class="popup__contacts-details">
-                                        <div class="popup__contacts-top">
-                                            <input type="text" name="name" id="name" placeholder="Имя" required />
-                                            <input type="email" name="email" id="email" placeholder="Email" required />
-                                        </div>
-                                        <textarea name="message" id="message" cols="52" rows="7" placeholder="Сообщение..." required></textarea>
-                                        <button class="popup__contacts-button">Отправить сообщение</button>
-                                    </div>
-                                </div>
-                            </form>
-                        </div>
-                        <button class="popup__close-button">X</button>
-                    </div>
+                <nav class="nav">
+                    <ul class="nav__list">
+                        <li class="nav__item">
+                            <a href="#about" class="nav__link">О нас</a>
+                        </li>
+                        <li class="nav__item">
+                            <a href="#services" class="nav__link">Услуги</a>
+                        </li>
+                        <li class="nav__item">
+                            <a href="#projects" class="nav__link">Проекты</a>
+                        </li>
+                        <li class="nav__item">
+                            <a href="#contacts" class="nav__link">Контакты</a>
+                        </li>
+                    </ul>
+                </nav>
+                <div class="feedback">
+                    <button class="feedback__button button">Написать нам</button>
                 </div>
             </div>
-
-            <canvas id="neuro"></canvas>
         </header>
 
         <main class="main-inner">
@@ -198,11 +174,22 @@
                                     <div class="contacts__form-wrap">
                                         <div class="contacts__details">
                                             <div class="contacts__top-wrap">
-                                                <input type="text" name="name" id="name" placeholder="Имя" required />
+                                                <input type="text" name="name" id="name" placeholder="Ваше имя" required />
+                                                <input type="tel" name="tel" id="tel" placeholder="Телефон" required />
                                                 <input type="email" name="email" id="email" placeholder="Email" required />
                                             </div>
-
-                                            <textarea name="message" id="message" cols="52" rows="7" placeholder="Сообщение..." required></textarea>
+                                            <p class="contacts__politics">
+                                                Нажимая на кнопку "Отправить" вы соглашаетесь с нашей
+                                                <a href="#" class="contacts__politics-link">Политикой конфиденциальности</a>
+                                            </p>
+                                            <textarea
+                                                name="message"
+                                                id="message"
+                                                cols="52"
+                                                rows="7"
+                                                placeholder="Ваш вопрос (необязательно)"
+                                                required
+                                            ></textarea>
                                             <button class="contacts__button">Отправить сообщение</button>
                                         </div>
                                     </div>
@@ -210,27 +197,27 @@
                             </div>
                         </div>
                     </div>
-                </div>
-
-                <div class="content">
-                    <div class="logo">
-                        <a href="index.html"><img src="img/logo-white.png" alt="Лого PMC" class="logo__img" width="90px" height="auto" /></a>
-                    </div>
-                    <div class="content__menu">
-                        <ul class="content__list">
-                            <li class="content__item">
-                                <a href="/index.html#about" class="content__link">О нас</a>
-                            </li>
-                            <li class="content__item">
-                                <a href="/index.html#services" class="content__link">Услуги</a>
-                            </li>
-                            <li class="content__item">
-                                <a href="/index.html#projects" class="content__link">Проекты</a>
-                            </li>
-                            <li class="content__item">
-                                <a href="/index.html#contacts" class="content__link">Контакты</a>
-                            </li>
-                        </ul>
+                    <div class="content">
+                        <div class="content__menu">
+                            <ul class="content__list">
+                                <li class="content__item">
+                                    <a href="#about" class="content__link">О нас</a>
+                                </li>
+                                <li class="content__item">
+                                    <a href="#services" class="content__link">Услуги</a>
+                                </li>
+                                <li class="content__item">
+                                    <a href="#projects" class="content__link">Проекты</a>
+                                </li>
+                                <li class="content__item">
+                                    <a href="#contacts" class="content__link">Контакты</a>
+                                </li>
+                            </ul>
+                        </div>
+                        <div class="content__message">
+                            <span class="content__title">Пишите нам</span>
+                            <a href="https://t.me/verba991188" class="content__tg">Телеграм</a>
+                        </div>
                     </div>
                 </div>
             </div>
@@ -305,5 +292,6 @@
         <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
         <script src="script/scripts.js"></script>
         <script src="script/popup.js"></script>
+        <script src="script/fix-nav.js"></script>
     </body>
 </html>

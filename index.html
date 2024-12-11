@@ -11,68 +11,70 @@
     </head>
     <body>
         <header class="header">
-            <div class="header__content container">
-                <div class="header__wrapper">
-                    <div class="logo">
-                        <a href="index.html"><img src="img/logo-white.png" alt="Лого PMC" class="logo__img" width="90px" height="auto" /></a>
-                    </div>
-                    <nav class="nav">
-                        <ul class="nav__list">
-                            <li class="nav__item">
-                                <a href="#about" class="nav__link">О нас</a>
-                            </li>
-                            <li class="nav__item">
-                                <a href="#services" class="nav__link">Услуги</a>
-                            </li>
-                            <li class="nav__item">
-                                <a href="#projects" class="nav__link">Проекты</a>
-                            </li>
-                            <li class="nav__item">
-                                <a href="#contacts" class="nav__link">Контакты</a>
-                            </li>
-                        </ul>
-                    </nav>
-                    <div class="feedback">
-                        <button class="feedback__button button">Написать нам</button>
-                    </div>
+            <div class="nav__wrapper">
+                <div class="logo">
+                    <a href="index.html"><img src="img/logo-white.png" alt="Лого PMC" class="logo__img" width="90px" height="auto" /></a>
                 </div>
-                <div class="popup" id="popup">
-                    <div class="popup__content">
-                        <h2 class="popup__title">Напишите нам</h2>
-                        <div class="popup__container">
-                            <form>
-                                <div class="popup__contacts-form">
-                                    <div class="popup__contacts-details">
-                                        <div class="popup__contacts-top">
-                                            <input type="text" name="name" id="name" placeholder="Имя" required />
-                                            <input type="email" name="email" id="email" placeholder="Email" required />
-                                        </div>
-                                        <textarea name="message" id="message" cols="52" rows="7" placeholder="Сообщение..." required></textarea>
-                                        <button class="popup__contacts-button">Отправить сообщение</button>
-                                    </div>
-                                </div>
-                            </form>
-                        </div>
-                        <button class="popup__close-button">X</button>
-                    </div>
-                </div>
-
-                <div class="header__info">
-                    <p class="header__title">
-                        <span class="header__title_colored">Ускоряем ваши</span>
-                        бизнес-процессы
-                    </p>
-                    <div class="header__description-wrap">
-                        <p class="header__description">
-                            Автоматизация бизнес-процессов на базе Google-таблиц, интеграции с Google-сервисами и внешними ресурсами, создание Telegram-ботов и
-                            кастомных скриптов.
-                        </p>
-                    </div>
+                <nav class="nav">
+                    <ul class="nav__list">
+                        <li class="nav__item">
+                            <a href="#about" class="nav__link">О нас</a>
+                        </li>
+                        <li class="nav__item">
+                            <a href="#services" class="nav__link">Услуги</a>
+                        </li>
+                        <li class="nav__item">
+                            <a href="#projects" class="nav__link">Проекты</a>
+                        </li>
+                        <li class="nav__item">
+                            <a href="#contacts" class="nav__link">Контакты</a>
+                        </li>
+                    </ul>
+                </nav>
+                <div class="feedback">
+                    <button class="feedback__button button">Написать нам</button>
                 </div>
             </div>
-
-            <canvas id="neuro"></canvas>
         </header>
+
+        <section class="top-info container">
+            <div class="top-info__wrapper">
+                <div class="top-info__content">
+                    <div class="popup" id="popup">
+                        <div class="popup__content">
+                            <h2 class="popup__title">Напишите нам</h2>
+                            <div class="popup__container">
+                                <form>
+                                    <div class="popup__contacts-form">
+                                        <div class="popup__contacts-details">
+                                            <div class="popup__contacts-top">
+                                                <input type="text" name="name" id="name" placeholder="Имя" required />
+                                                <input type="email" name="email" id="email" placeholder="Email" required />
+                                            </div>
+                                            <textarea name="message" id="message" cols="52" rows="7" placeholder="Сообщение..." required></textarea>
+                                            <button class="popup__contacts-button">Отправить сообщение</button>
+                                        </div>
+                                    </div>
+                                </form>
+                            </div>
+                            <button class="popup__close-button">X</button>
+                        </div>
+                    </div>
+
+                    <div class="top-info__info">
+                        <p class="top-info__title">
+                            <span class="top-info__title_colored">Успешные проекты</span>
+                            начинаются с плана
+                        </p>
+                        <div class="top-info__description-wrap">
+                            <p class="top-info__description">от ТЭО до ввода <br />в эксплуатацию</p>
+                        </div>
+                    </div>
+                </div>
+
+                <canvas id="neuro"></canvas>
+            </div>
+        </section>
 
         <main class="main">
             <!-- Планирование -->
@@ -175,57 +177,145 @@
                 <div class="services__wrap">
                     <h2 class="services__title title">Наши услуги</h2>
                     <div class="services__blocks">
-                        <div class="services__item">
+                        <div class="services__block">
                             <span class="services__item-title">Инжиниринговые услуги</span>
                             <span class="services__description"
-                                >Залог успешной реализации любого Проекта — <br />это его своевременная проработка, включая <br />
-                                план реализации, бюджет, оценки рисков и<br />
+                                >Залог успешной реализации любого Проекта — это его своевременная проработка, включая план реализации, бюджет, оценки рисков и
                                 процедур управления проектом</span
                             >
                             <ul class="services__list">
-                                <li class="services__item-description">Разработка концепции реализации проектов</li>
-                                <li class="services__item-description">Разработка Техникоэкономического обоснования</li>
-                                <li class="services__item-description">Разработка Pre feed</li>
-                                <li class="services__item-description">Разработка логистической концепции</li>
-                                <li class="services__item-description">Аудит бизнес-процессов, разработка процедур и проектных методологий</li>
+                                <div class="services__item">
+                                    <span class="services__count">/0.01</span>
+                                    <span class="services__text">Разработка концепции реализации проектов</span>
+                                </div>
+                                <div class="services__item">
+                                    <span class="services__count">/0.02</span>
+                                    <span class="services__text">Разработка Техникоэкономического обоснования</span>
+                                </div>
+                                <div class="services__item">
+                                    <span class="services__count">/0.03</span>
+                                    <span class="services__text">Разработка Pre feed</span>
+                                </div>
+                                <div class="services__item">
+                                    <span class="services__count">/0.04</span>
+                                    <span class="services__text">Разработка логистической концепции</span>
+                                </div>
+                                <div class="services__item">
+                                    <span class="services__count">/0.05</span>
+                                    <span class="services__text">Аудит бизнес-процессов, разработка процедур и проектных методологий</span>
+                                </div>
+                                <div class="services__item">
+                                    <span class="services__count">/0.06</span>
+                                    <span class="services__text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Beatae, officiis consequatur</span>
+                                </div>
                             </ul>
                         </div>
 
-                        <div class="services__item">
-                            <span class="services__item-title">Управление проектом PMC</span>
+                        <div class="services__block">
+                            <span class="services__item-title">Управление проектом PMCCON</span>
                             <span class="services__description"
-                                >При реализации проектов инвестору необходимо контролировать процесс и оказывать <br />
-                                управляющее воздействие. Наша команда готова выступить в роли PMC-подрядчика</span
+                                >При реализации проектов инвестору необходимо контролировать процесс и оказывать управляющее воздействие. Наша команда готова
+                                выступить в роли PMC-подрядчика</span
                             >
                             <ul class="services__list">
-                                <li class="services__item-description">Представление услуг технического заказчика</li>
-                                <li class="services__item-description">Контроль разработки проектной и рабочей документации</li>
-                                <li class="services__item-description">Календарно-сетевое планирование и отчетность</li>
-                                <li class="services__item-description">Независимая оценка стоимости проекта и контроль затрат на стадии реализации</li>
-                                <li class="services__item-description">Квалификация поставщиков оборудования и материалов</li>
-                                <li class="services__item-description">Организация и контроль выполнения строительных работ</li>
-                                <li class="services__item-description">
-                                    Организация тендеров, включая подготовку документации, технический и коммерческий анализ предложений
-                                </li>
+                                <div class="services__item">
+                                    <span class="services__count">/0.01</span>
+                                    <span class="services__text">Представление услуг технического заказчика</span>
+                                </div>
+                                <div class="services__item">
+                                    <span class="services__count">/0.02</span>
+                                    <span class="services__text">Контроль разработки проектной и рабочей документации</span>
+                                </div>
+                                <div class="services__item">
+                                    <span class="services__count">/0.03</span>
+                                    <span class="services__text">Календарно-сетевое планирование и отчетность</span>
+                                </div>
+                                <div class="services__item">
+                                    <span class="services__count">/0.04</span>
+                                    <span class="services__text">Независимая оценка стоимости проекта и контроль затрат на стадии реализации</span>
+                                </div>
+                                <div class="services__item">
+                                    <span class="services__count">/0.05</span>
+                                    <span class="services__text">Квалификация поставщиков оборудования и материалов</span>
+                                </div>
+                                <div class="services__item">
+                                    <span class="services__count">/0.06</span>
+                                    <span class="services__text">Организация и контроль выполнения строительных работ</span>
+                                </div>
+                                <div class="services__item">
+                                    <span class="services__count">/0.06</span>
+                                    <span class="services__text"
+                                        >Организация тендеров, включая подготовку документации, технический и коммерческий анализ предложений</span
+                                    >
+                                </div>
                             </ul>
                         </div>
 
-                        <div class="services__item">
+                        <div class="services__block">
                             <span class="services__item-title"
                                 >VPS <br />
                                 ORacle primavera</span
                             >
                             <span class="services__description"
-                                >Мы предоставляем инструменты по управлению проектом вашей команде. На сервере размещены <br />
-                                все необходимое для успешной реализации <br />
+                                >Мы предоставляем инструменты по управлению проектом вашей команде. На сервере размещены все необходимое для успешной реализации
                                 проектом</span
                             >
                             <ul class="services__list">
-                                <li class="services__item-description">Oracle Primavera содержание и расписание</li>
-                                <li class="services__item-description">Cloud обмен файлами</li>
-                                <li class="services__item-description">Office редактирование документов</li>
-                                <li class="services__item-description">Task скрам канбан</li>
-                                <li class="services__item-description">Talk видеоконференции</li>
+                                <div class="services__item">
+                                    <span class="services__count">/0.01</span>
+                                    <span class="services__text">Oracle Primavera содержание и расписание</span>
+                                </div>
+                                <div class="services__item">
+                                    <span class="services__count">/0.02</span>
+                                    <span class="services__text">Cloud обмен файлами</span>
+                                </div>
+                                <div class="services__item">
+                                    <span class="services__count">/0.03</span>
+                                    <span class="services__text">Office редактирование документов</span>
+                                </div>
+                                <div class="services__item">
+                                    <span class="services__count">/0.04</span>
+                                    <span class="services__text">Task скрам канбан</span>
+                                </div>
+                                <div class="services__item">
+                                    <span class="services__count">/0.05</span>
+                                    <span class="services__text">Talk видеоконференции</span>
+                                </div>
+                                <div class="services__item">
+                                    <span class="services__count">/0.06</span>
+                                    <span class="services__text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Beatae, officiis consequatur</span>
+                                </div>
+                            </ul>
+                        </div>
+
+                        <div class="services__block">
+                            <span class="services__item-title">BI Аналитика</span>
+                            <span class="services__description">Lorem ipsum dolor sit amet consectetur adipisicing elit. Beatae, officiis consequatur</span>
+                            <ul class="services__list">
+                                <div class="services__item">
+                                    <span class="services__count">/0.01</span>
+                                    <span class="services__text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Beatae, officiis consequatur</span>
+                                </div>
+                                <div class="services__item">
+                                    <span class="services__count">/0.02</span>
+                                    <span class="services__text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Beatae, officiis consequatur</span>
+                                </div>
+                                <div class="services__item">
+                                    <span class="services__count">/0.03</span>
+                                    <span class="services__text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Beatae, officiis consequatur</span>
+                                </div>
+                                <div class="services__item">
+                                    <span class="services__count">/0.04</span>
+                                    <span class="services__text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Beatae, officiis consequatur</span>
+                                </div>
+                                <div class="services__item">
+                                    <span class="services__count">/0.05</span>
+                                    <span class="services__text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Beatae, officiis consequatur</span>
+                                </div>
+                                <div class="services__item">
+                                    <span class="services__count">/0.06</span>
+                                    <span class="services__text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Beatae, officiis consequatur</span>
+                                </div>
                             </ul>
                         </div>
                     </div>
@@ -238,6 +328,22 @@
                 <div class="projects__wrap">
                     <div class="projects__title-wrap">
                         <h2 class="projects__title title">Наши проекты</h2>
+                        <a href="all-projects.html" class="projects__link-project">
+                            <span class="projects__mask">
+                                <div class="projects__link-container">
+                                    <span class="projects__title-top projects__link-title">Все проекты</span>
+                                    <span class="projects__title-bottom projects__link-title">Все проекты</span>
+                                </div>
+                            </span>
+                            <div class="projects__link-icon">
+                                <svg class="projects__icon" width="24" height="24" xmlns="http://www.w3.org/2000/svg" fill-rule="evenodd" clip-rule="evenodd">
+                                    <path d="M21.883 12l-7.527 6.235.644.765 9-7.521-9-7.479-.645.764 7.529 6.236h-21.884v1h21.883z" />
+                                </svg>
+                                <svg class="projects__icon" width="24" height="24" xmlns="http://www.w3.org/2000/svg" fill-rule="evenodd" clip-rule="evenodd">
+                                    <path d="M21.883 12l-7.527 6.235.644.765 9-7.521-9-7.479-.645.764 7.529 6.236h-21.884v1h21.883z" />
+                                </svg>
+                            </div>
+                        </a>
                     </div>
                     <div class="projects__block">
                         <ul class="projects__list">
@@ -339,7 +445,7 @@
                         <ul class="questions__list">
                             <li class="questions__item">
                                 <a class="questions__expand">
-                                    <h2 class="questions__question">МТИ - государственное учебное заведение?</h2>
+                                    <p class="questions__question">МТИ - государственное учебное заведение?</p>
                                     <div class="questions__arrow">+</div>
                                 </a>
 
@@ -354,7 +460,7 @@
 
                             <li class="questions__item">
                                 <a class="questions__expand">
-                                    <h2 class="questions__question">Законно ли обучение на очной форме в дистационном онлайн-формате?</h2>
+                                    <p class="questions__question">Законно ли обучение на очной форме в дистационном онлайн-формате?</p>
                                     <div class="questions__arrow">+</div>
                                 </a>
 
@@ -369,7 +475,7 @@
 
                             <li class="questions__item">
                                 <a class="questions__expand">
-                                    <h2 class="questions__question">Положена ли отсрочка от армии студентам МТИ?</h2>
+                                    <p class="questions__question">Положена ли отсрочка от армии студентам МТИ?</p>
                                     <div class="questions__arrow">+</div>
                                 </a>
 
@@ -384,7 +490,7 @@
 
                             <li class="questions__item">
                                 <a class="questions__expand">
-                                    <h2 class="questions__question">Можно ли студентам заочникам получить острочку от армии?</h2>
+                                    <p class="questions__question">Можно ли студентам заочникам получить острочку от армии?</p>
                                     <div class="questions__arrow">+</div>
                                 </a>
 
@@ -399,7 +505,7 @@
 
                             <li class="questions__item">
                                 <a class="questions__expand">
-                                    <h2 class="questions__question">У меня уже есть диплом колледжа/ВУЗа. Мне нужно сдавать ЕГЭ?</h2>
+                                    <p class="questions__question">У меня уже есть диплом колледжа/ВУЗа. Мне нужно сдавать ЕГЭ?</p>
                                     <div class="questions__arrow">+</div>
                                 </a>
 
@@ -414,7 +520,7 @@
 
                             <li class="questions__item">
                                 <a class="questions__expand">
-                                    <h2 class="questions__question">Что делать, если я не сдавал или не сдал ЕГЭ?</h2>
+                                    <p class="questions__question">Что делать, если я не сдавал или не сдал ЕГЭ?</p>
                                     <div class="questions__arrow">+</div>
                                 </a>
 
@@ -429,7 +535,7 @@
 
                             <li class="questions__item">
                                 <a class="questions__expand">
-                                    <h2 class="questions__question">Действуют ли программы рассрочки?</h2>
+                                    <p class="questions__question">Действуют ли программы рассрочки?</p>
                                     <div class="questions__arrow">+</div>
                                 </a>
 
@@ -492,27 +598,27 @@
                             </div>
                         </div>
                     </div>
-                </div>
-
-                <div class="content">
-                    <div class="logo">
-                        <a href="index.html"><img src="img/logo-white.png" alt="Лого PMC" class="logo__img" width="90px" height="auto" /></a>
-                    </div>
-                    <div class="content__menu">
-                        <ul class="content__list">
-                            <li class="content__item">
-                                <a href="#about" class="content__link">О нас</a>
-                            </li>
-                            <li class="content__item">
-                                <a href="#services" class="content__link">Услуги</a>
-                            </li>
-                            <li class="content__item">
-                                <a href="#projects" class="content__link">Проекты</a>
-                            </li>
-                            <li class="content__item">
-                                <a href="#contacts" class="content__link">Контакты</a>
-                            </li>
-                        </ul>
+                    <div class="content">
+                        <div class="content__menu">
+                            <ul class="content__list">
+                                <li class="content__item">
+                                    <a href="#about" class="content__link">О нас</a>
+                                </li>
+                                <li class="content__item">
+                                    <a href="#services" class="content__link">Услуги</a>
+                                </li>
+                                <li class="content__item">
+                                    <a href="#projects" class="content__link">Проекты</a>
+                                </li>
+                                <li class="content__item">
+                                    <a href="#contacts" class="content__link">Контакты</a>
+                                </li>
+                            </ul>
+                        </div>
+                        <div class="content__message">
+                            <span class="content__title">Пишите нам</span>
+                            <a href="https://t.me/verba991188" class="content__tg">Телеграм</a>
+                        </div>
                     </div>
                 </div>
             </div>
@@ -588,5 +694,6 @@
         <script src="script/scripts.js"></script>
         <script src="script/accordion.js"></script>
         <script src="script/popup.js"></script>
+        <script src="script/fix-nav.js"></script>
     </body>
 </html>
