@@ -127,8 +127,10 @@ canvas#neuro {
 /* Top-info */
 
 .top-info {
-    min-height: 1020px;
     display: flex;
+    min-height: 1020px;
+    height: 100vh;
+    margin-top: -144px;
 
     &__wrapper {
         width: 100%;
