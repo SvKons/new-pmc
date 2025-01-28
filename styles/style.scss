@@ -79,6 +79,17 @@ body {
     }
 }
 
+.email,
+.tel {
+    font-size: 1.25rem;
+    color: var(--orange);
+    transition: all 0.3s ease;
+
+    &:hover {
+        text-decoration: underline;
+    }
+}
+
 /* Fonts */
 
 // НАДО ВЫБРАТЬ ДРУГОЙ ШРИФТ!!!!!!!!!!!!!
@@ -150,8 +161,15 @@ canvas#neuro {
     &__info {
         display: flex;
         justify-content: space-between;
-        flex-wrap: wrap;
+        // flex-wrap: wrap;
         align-items: center;
+    }
+
+    &__title-wrap {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        gap: 25px;
     }
 
     &__title {
@@ -165,8 +183,7 @@ canvas#neuro {
     }
 
     &__description-wrap {
-        max-width: 570px;
-        align-self: flex-end;
+        max-width: 900px;
     }
 
     &__description {
@@ -174,6 +191,13 @@ canvas#neuro {
         color: var(--white);
         font-weight: 300;
         line-height: 1.2;
+    }
+
+    &__text {
+        max-width: 770px;
+        font-size: 2.25rem;
+        align-self: self-end;
+        color: var(--white);
     }
 }
 
@@ -278,7 +302,7 @@ canvas#neuro {
     }
 
     &__slogan {
-        max-width: 1070px;
+        max-width: 1430px;
         font-size: 6.25rem;
         text-transform: uppercase;
         margin-bottom: 80px;
@@ -301,12 +325,15 @@ canvas#neuro {
 
     &__description {
         max-width: 550px;
-        font-size: 70px;
+        font-size: 4.375rem;
     }
 
     &__text {
-        max-width: 612px;
-        font-size: 1.875rem;
+        max-width: 800px;
+        font-size: 2.125rem;
+        display: flex;
+        flex-direction: column;
+        gap: 30px;
 
         &_colored {
             color: var(--orange);
@@ -360,39 +387,29 @@ canvas#neuro {
     &__list {
         display: grid;
         grid-template-columns: repeat(3, 1fr);
-        grid-template-rows: 140px repeat(4, auto);
-        gap: 50px;
+        gap: 135px;
         color: var(--white);
         padding: 30px 200px;
     }
 
     &__item {
-        display: grid;
-        grid-template-columns: 1fr auto auto;
-        grid-template-rows: subgrid;
-        grid-row: span 2;
-        grid-template-areas:
-            'title title title'
-            'description description description';
-        gap: 10px;
-        padding-bottom: 15px;
+        display: flex;
+        flex-direction: column;
+        gap: 30px;
     }
 
     &__text {
-        grid-area: title;
         font-size: 2.125rem;
+        color: var(--lightest-blue);
         text-transform: uppercase;
-        padding: 0 15px;
         margin: 0;
     }
 
     &__description {
-        grid-area: description;
         font-size: 1.625rem;
         font-weight: 300;
         line-height: 1.2;
         margin: 0;
-        padding: 0 15px;
     }
 }
 
@@ -414,6 +431,7 @@ canvas#neuro {
         grid-template-columns: repeat(auto-fill, minmax(360px, 1fr));
         gap: 50px;
         padding: 0 250px;
+        margin-bottom: 30px;
     }
 
     &__block {
@@ -434,6 +452,7 @@ canvas#neuro {
     }
 
     &__count {
+        font-size: 1.25rem;
         color: var(--lightest-blue);
     }
 
@@ -458,6 +477,37 @@ canvas#neuro {
         padding-bottom: 30px;
         padding-left: 20px;
     }
+
+    &__bottom-text {
+        padding: 0 20px;
+    }
+
+    &__bottom-title {
+        font-size: 2.25rem;
+        color: var(--lightest-blue);
+        margin-bottom: 15px;
+    }
+
+    &__answer {
+        font-size: 1.875rem;
+    }
+
+    &__block-list {
+        margin-bottom: 15px;
+    }
+
+    &__block-title {
+        display: inline-block;
+        font-size: 1.625rem;
+        margin-bottom: 10px;
+    }
+
+    &__bottom-list {
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
+        font-size: 1.25rem;
+    }
 }
 
 /* Projeects*/
@@ -469,10 +519,24 @@ canvas#neuro {
         border-top: 1px solid var(--white);
         display: flex;
         justify-content: space-between;
+        gap: 50px;
     }
 
     &__title {
         padding-bottom: 20px;
+    }
+
+    &__title-wrap {
+        width: 40%;
+        display: flex;
+        flex-direction: column;
+        gap: 30px;
+    }
+
+    &__description {
+        color: var(--white);
+        font-size: 30px;
+        line-height: 1.2;
     }
 
     &__block {
@@ -480,9 +544,15 @@ canvas#neuro {
         padding-top: 50px;
     }
 
+    &__left-block {
+        max-width: 650px;
+        display: flex;
+        flex-direction: column;
+        gap: 20px;
+    }
+
     &__left-container {
         display: flex;
-        justify-content: center;
         align-items: center;
         gap: 30px;
     }
@@ -606,6 +676,50 @@ canvas#neuro {
             transform: translate(-40px);
         }
     }
+
+    &__project-about {
+        font-size: 23px;
+        opacity: 0.6;
+        padding-left: 50px;
+    }
+}
+
+/* Choose */
+
+.choose {
+    padding-bottom: 100px;
+
+    &__wrap {
+        border-top: 1px solid var(--white);
+    }
+
+    &__list {
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
+        gap: 100px;
+        color: var(--white);
+        padding: 30px 200px;
+    }
+
+    &__item {
+        display: flex;
+        flex-direction: column;
+        gap: 30px;
+    }
+
+    &__text {
+        font-size: 2.125rem;
+        color: var(--lightest-blue);
+        text-transform: uppercase;
+        margin: 0;
+    }
+
+    &__description {
+        font-size: 1.625rem;
+        font-weight: 300;
+        line-height: 1.2;
+        margin: 0;
+    }
 }
 
 /* Questions */
@@ -661,11 +775,41 @@ canvas#neuro {
     &__text {
         font-size: 1.25rem;
         color: var(--white);
+
+        &_position {
+            display: flex;
+            flex-direction: column;
+            gap: 10px;
+        }
     }
 
     &__arrow {
         font-weight: 700;
         font-size: 1.25rem;
+    }
+
+    &__link {
+        text-decoration: none;
+        color: var(--orange);
+
+        &:hover {
+            text-decoration: underline;
+        }
+    }
+}
+
+/* Reviews */
+
+.reviews {
+    padding-bottom: 100px;
+
+    &__wrap {
+        border-top: 1px solid var(--white);
+    }
+
+    &__text {
+        color: var(--white);
+        font-size: 40px;
     }
 }
 
@@ -690,6 +834,7 @@ canvas#neuro {
     margin-bottom: 100px;
 
     &__info {
+        max-width: 1030px;
         color: var(--white);
     }
 
@@ -700,7 +845,7 @@ canvas#neuro {
     }
 
     &__text {
-        font-size: 4.5rem;
+        font-size: 3.125rem;
         color: var(--orange);
         margin-bottom: 30px;
     }
@@ -709,6 +854,8 @@ canvas#neuro {
         display: flex;
         flex-direction: column;
         gap: 10px;
+        font-size: 1.25rem;
+        color: var(--black);
     }
 
     &__email,
@@ -788,6 +935,11 @@ canvas#neuro {
     &__details input[type='email']:focus,
     &__details textarea:focus {
         border-color: var(--black);
+    }
+
+    &__form-title {
+        font-size: 2rem;
+        margin-bottom: 30px;
     }
 
     &__politics,
