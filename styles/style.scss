@@ -340,20 +340,40 @@ canvas#neuro {
         }
     }
 
-    &__statistics {
+    &__block {
         display: flex;
-        justify-content: space-between;
-        flex-wrap: wrap;
+        flex-direction: column;
+        gap: 10px;
+        background: var(--transparent);
+        border-radius: 30px;
+        padding: 50px 30px;
+        margin-bottom: 100px;
+    }
+
+    &__statistics {
+        display: grid;
+        grid-template-columns: repeat(3, 490px);
+        grid-template-rows: repeat(2, auto);
+        justify-content: center;
+        text-align: center;
+        gap: 50px;
+        padding: 0 250px;
+        margin-bottom: 30px;
     }
 
     &__item {
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        gap: 15px;
+        max-width: 550px;
+        display: grid;
+        grid-template-columns: 1fr;
+        grid-template-rows: subgrid;
+        grid-row: span 2;
+        grid-template-areas:
+            'number number number'
+            'text-statistic text-statistic text-statistic';
     }
 
     &__number {
+        grid-area: number;
         position: relative;
         font-size: 9.375rem;
 
@@ -371,6 +391,7 @@ canvas#neuro {
     }
 
     &__text-statistic {
+        grid-area: text-statistic;
         font-size: 1.625rem;
     }
 }
@@ -428,7 +449,8 @@ canvas#neuro {
 
     &__list {
         display: grid;
-        grid-template-columns: repeat(auto-fill, minmax(360px, 1fr));
+        grid-template-columns: repeat(3, 470px);
+        grid-template-rows: repeat(2, auto);
         gap: 50px;
         padding: 0 250px;
         margin-bottom: 30px;
@@ -439,26 +461,40 @@ canvas#neuro {
         flex-direction: column;
         gap: 10px;
         background: var(--transparent);
-        border: 1px solid var(--white);
         border-radius: 30px;
         padding: 50px 30px;
         margin-bottom: 100px;
     }
 
     &__item {
-        display: flex;
-        flex-direction: column;
+        display: grid;
+        grid-template-columns: 1fr;
+        grid-template-rows: subgrid;
+        grid-row: span 2;
+        grid-template-areas:
+            'count count count'
+            'text text text';
         gap: 10px;
+    }
+
+    &__number {
+        grid-area: number;
+    }
+
+    &__text-statistic {
+        grid-area: text-statistic;
     }
 
     &__count {
         font-size: 1.25rem;
         color: var(--lightest-blue);
+        grid-area: count;
     }
 
     &__text {
         font-size: 1.625rem;
         opacity: 0.8;
+        grid-area: text;
     }
 
     &__item-title {
@@ -853,7 +889,7 @@ canvas#neuro {
         min-width: 350px;
         max-width: 400px;
         width: 100%;
-        min-height: 200px;
+        min-height: 225px;
         max-width: 500px;
         height: 100%;
         background: var(--transparent);
@@ -1303,6 +1339,7 @@ canvas#neuro {
 
 .about-project {
     margin-bottom: 100px;
+
     &__wrap {
         border-top: 1px solid var(--white);
     }
@@ -1398,7 +1435,7 @@ canvas#neuro {
         display: flex;
         justify-content: space-between;
         gap: 10px;
-        width: 50%;
+        width: 70%;
     }
 
     &__text {

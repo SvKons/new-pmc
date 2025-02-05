@@ -291,22 +291,40 @@ canvas#neuro {
 .about__text_colored {
   color: var(--orange);
 }
-.about__statistics {
-  display: flex;
-  justify-content: space-between;
-  flex-wrap: wrap;
-}
-.about__item {
+.about__block {
   display: flex;
   flex-direction: column;
-  align-items: center;
-  gap: 15px;
+  gap: 10px;
+  background: var(--transparent);
+  border-radius: 30px;
+  padding: 50px 30px;
+  margin-bottom: 100px;
+}
+.about__statistics {
+  display: grid;
+  grid-template-columns: repeat(3, 490px);
+  grid-template-rows: repeat(2, auto);
+  justify-content: center;
+  text-align: center;
+  gap: 50px;
+  padding: 0 250px;
+  margin-bottom: 30px;
+}
+.about__item {
+  max-width: 550px;
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: subgrid;
+  grid-row: span 2;
+  grid-template-areas: "number number number" "text-statistic text-statistic text-statistic";
 }
 .about__number {
+  grid-area: number;
   position: relative;
   font-size: 9.375rem;
 }
 .about__text-statistic {
+  grid-area: text-statistic;
   font-size: 1.625rem;
 }
 
@@ -353,7 +371,8 @@ canvas#neuro {
 }
 .services__list {
   display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(360px, 1fr));
+  grid-template-columns: repeat(3, 470px);
+  grid-template-rows: repeat(2, auto);
   gap: 50px;
   padding: 0 250px;
   margin-bottom: 30px;
@@ -363,23 +382,33 @@ canvas#neuro {
   flex-direction: column;
   gap: 10px;
   background: var(--transparent);
-  border: 1px solid var(--white);
   border-radius: 30px;
   padding: 50px 30px;
   margin-bottom: 100px;
 }
 .services__item {
-  display: flex;
-  flex-direction: column;
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: subgrid;
+  grid-row: span 2;
+  grid-template-areas: "count count count" "text text text";
   gap: 10px;
+}
+.services__number {
+  grid-area: number;
+}
+.services__text-statistic {
+  grid-area: text-statistic;
 }
 .services__count {
   font-size: 1.25rem;
   color: var(--lightest-blue);
+  grid-area: count;
 }
 .services__text {
   font-size: 1.625rem;
   opacity: 0.8;
+  grid-area: text;
 }
 .services__item-title {
   font-size: 3.25rem;
@@ -705,7 +734,7 @@ canvas#neuro {
   min-width: 350px;
   max-width: 400px;
   width: 100%;
-  min-height: 200px;
+  min-height: 225px;
   max-width: 500px;
   height: 100%;
   background: var(--transparent);
@@ -1167,7 +1196,7 @@ canvas#neuro {
   display: flex;
   justify-content: space-between;
   gap: 10px;
-  width: 50%;
+  width: 70%;
 }
 .portfolio__text {
   color: var(--lightest-blue);
